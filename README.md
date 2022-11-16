@@ -14,7 +14,7 @@
 # Intro to React Workshop 
 
 **Date:** Tuesday, November 22nd, 2022 <br>
-**Description**: In this workshop we will be building a simple "Tip Calculator" application using Apple's Swift programming language in Xcode and Apple's **UIkit** framework. For more information on iOS Development and other resources talked about during the meeting please continue looking below for all resources and **coding demo** steps. <br>
+**Description**: In this workshop You will learn the basics of **React**. You will get an introduction into the ever evolving programming language React. This meeting will also be our **last meeting of the semester**, where we’ll recap all events and new club members. . For more information on React and other resources talked about during the meeting please continue looking below for all resources and **coding demo** steps. <br>
 **Workshop Zoom Recording**: [Click here](https://jjay-cuny.zoom.us/rec/share/w_WX2fAcJoPI4-4dhcHLG_y_hPCXmjX7NBequkk0QoH06S34hx0b5QGo7FbupUc2.wPWYQlzWqFX792Z-) <br>
 **Workshop Google Slides**: [Click here](https://docs.google.com/presentation/d/1viKLdLpINEwy6IiY2uzX_hjU2UOL8sxf_YBFfxtV2xw/edit?usp=sharing) <br>
 
