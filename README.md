@@ -6,7 +6,7 @@
 # Computer Science Society Club
 
 ## Table of Contents
-- [Tip Calculator App](#Tip-Calculator-App)
+- [Pre Demo Introduction](#Pre-Demo-Introduction)
 - [Pre Requisites](#Pre-Requisites)
 - [React Demo](#React-Demo)
 - [Continue Learning About React](#Continue-Learning-About-React)
@@ -21,25 +21,14 @@
 ---
 
 
-## Tip Calculator App
+## Pre Demo Introduction
 
-**Description**: We will be building a simple one screen Tip Calculator application in Xcode using the power of Swift.
-**App Features**: 
-- The User will be able to add in an original amount. Let's say the user enters an amount of **$50.00**. After a user enters an amount, they will be able to choose the **tip percentage** that they'd like to calculate an amount for. The three tip choices that they will have is **15%, 20%, and 25%**. Based on a choice, our application will calculate the new total amount with the tip percentate. Let's say the user picks **20%** as the tip percentage. Our application will display the new total amount, with the initial price of $100 + 25% tip, which should be **$120**.
-- We will add images to our application (specifically the CSS Club's logo). These images, will be on our **main application screen, the loading screen of our app, and as an icon of our app**.
-- We will also stylize our application.
-
-<details>
-<summary>Full application gif</summary>
-<br>
-<img src="https://i.imgur.com/7uDn8uR.gif" alt="drawing" width="150" height="300"/> 
-</details>
-
-<details>
-<summary>App logo on Loading Screen and App Icon</summary>
-<br>
-<img src="https://i.imgur.com/bOBa7zR.gif" alt="drawing" width="150" height="300"/> 
-</details>
+**Description**: We will be learning the vary basics of React.
+**We will be going over**: 
+- Understanding the **index.js** file code & displaying "Hello World!"
+- JSX elements
+- Functional Components
+- Parameters and embedding JavaScript in JSX
 
 ---
 
@@ -113,7 +102,7 @@
 
 > Note: Although the above action works, and you can run React on the Online Editor, we still recommend you download React and use it in a Coding editor like Visual Studio code, as seen in the **Pre Requisites** steps.
 
-## Step 0 - Look over React Files/Folders (After Installation)
+## Look over React Files/Folders (After Installation)
 
 1) Once inside of your coding editor, after having installed React, you now see a bunch of new files/folders. You probably see the **`node_modules`** folder. This folder contains every installed dependency for your project. You don't really need to worry about this folder.
     <details>
@@ -135,35 +124,245 @@
 
 4) Ignore the other files that you see outside of the 3 folders we mentioned as they won't be something we'll be touching over, since this is a beginner demo.
 
-## Step 1 - Creating App Design
+## Hello World
 
-**Description**: In this step we will begin designing our application in our `Main Storyboard`.
+**Description**: In this part of the demo we will start off with basic **JSX** tags.
 <details>
     <summary>Finished product for this step</summary>
     <img src="https://i.imgur.com/6SCeUyj.png" alt="drawing" width="170" height="300"/>
     </details>
 
-0) Let's head over to our `Main Storyboard` file, located on the left side of Xcode. This section on the left side is referred as the `Project Navigator`. You should now see an iPhone like screen. Here is where we will design our application. <br>
+0) Let's head over to our `index.js` file, located in the **`src`** folder. The **`index.js`** file is important as this is where we are redering our React code that displaye in the **root** class element in the `index.html` file in the **`public`** folder. Once in this file, delete everything on this file and copy & paste the code below.
 
-https://user-images.githubusercontent.com/71786791/197360059-4afba473-5760-4a93-aae9-0d618864383d.mov
+    ```JSX
+    import React from "react";
+    import ReactDOM from "react-dom/client";
 
-1) Let's locate `Xcode's Library Components` button. It should be a `+` at the top right corner of the middle section of our current screen. Click on it, and now you should see a pop-up displaying various components. If you click on a component, you will see a description of what they each do. <br>
+    const htmlContainer = document.getElementById("root");
+    const root = ReactDOM.createRoot(htmlContainer);
 
-https://user-images.githubusercontent.com/71786791/197360120-0d1ccbc9-5e72-43d6-906a-9960c1f22be4.mov
+    root.render(<h1>Hello World!</h1>)
+    ```
+    This code will display **`Hello World!`** in your browser.
+    <details>
+        <summary>Hello World in Browser</summary>
+        <img src="https://i.imgur.com/7dO5ZGo.png" alt="drawing" width="500" height="200"/>
+    </details>
+
+1) Let's look at the first line of code: **`import React from "react";`**. This Line isn't really necessary, but it's good practice to include to let your code editor to import the React library into this file. 
+
     
-2) Now, let's search up `label`, click on it and drag it on to the `View Controller`. Let's try to place it at the top of our screen, directly in the middle. We will be using this label to display the name of our application "Tip Calculator". <br>
+2) In the next line: **`import ReactDOM from "react-dom/client";`**, we are importing the **ReactDOM** library, which will allow us to create a **Root** and allow us to **render** a React element into the **Dom**. In simplified terms, this line allows us to render an **HTML** file.
 
-https://user-images.githubusercontent.com/71786791/197360165-c0c2dc7c-886c-49a0-948c-f28a95c1e9c1.mov
+3) Next up, we have the following line: **`const htmlContainer = document.getElementById("root");`**. 
+    
+    Going from left ----> right: 
+    1) we first have `const htmlContainer`. We are creating a constant variable, meaning we can't update this variable to anything else. 
+    2) After that we have `= document.getElementById("root")`. For those familiar with HTML, we are basically saying, select an HTML file (**index.html** in this case) and locate the element that has the **"root"** class name. 
+    3) If you go back to your **index.html** file, try to locate the root file. To sum up, this line is creating a variable that is accessing the **index.html** file that has the **root** class name.
+
+4) Next up, we have the following line: **`const root = ReactDOM.createRoot(htmlContainer);`**. 
+
+    Going from left ----> right: 
+    1) we first have `const root`. We are creating a constant variable named root, meaning we can't update this variable to anything else. 
+    2) After that we have `= ReactDOM.createRoot(htmlContainer);`. Here we are using the ReactDOM Module we imported in the second line of this file. Then, we access the function **createRoot()**, which takes in **htmlContainer** that we initialized in the previous line. In simple terms we are using **ReactDOM** to create a root (or connection) to the HTML file (htmlContainer).
+
+5) Finally, we have this line: **`root.render(<h1>Hello World!</h1>)`**.
+    
+    Using the **root** variable we defined earlier we are using the **render** function to render what are known as **JSX** elements, and what looks basically the same as **HTML** elements.
  
-3) Next, let's double click on the label, and let's give it a name of `Tip Calculator`. Make sure you center the text to the middle of the screen again. Let's then go to the right side of our screen, known as the `Inspection Secton`, and let's locate the `Font section`. Click on the `T` button, click on `style` and select the `bold` selection. This will bolden our label. That is all we will do with this label. <br>
+## JSX (Not the same as HTML elements)
 
-https://user-images.githubusercontent.com/71786791/197360202-3b548347-396f-48d1-90fd-f36b25ec8709.mov
+1) JSX means **JavaScript Syntax Extension** or **JavaScript XML** as some like to put it. In other words, JSX is an HTML-like syntax that you can use in React.
 
-4) Next, let's access our component's library again, click `+` button on the top right corner of the middle section. Search up `Image`, and drag the `Image View` onto your screen. Place it right below our `Tip Calculator` label and center it. We will use this component to display the CSS Logo. <br>
+    For example, in the **`root.render(<h1>Hello World!</h1>)`**, we are endering what looks very similar to a **h1** HTML tag. They have the same name but aren't really the same thing. 
+    
+    Let's try another example of JSX. Copy the code below inside of **root.render()**:
+    
+    ```
+    root.render(
+        <div>
+          <h1>Hello World!</h1>
+          <h1>Hi Again</h1>
+        </div>
+    )
+    ```
+    Here we have a **div** JSX element (container),  and a pair of **h1** JSX elements. They have the same functionality as regular HTML elements but are not to be mistaken of being the same.
+    
+    Let's try another example of JSX code. Enter this line of code:
+    
+    ```
+    root.render(
+        <>
+          <h3>Hello World!</h3>
+          <h3>Hi Again</h3>
+        </>
 
-https://user-images.githubusercontent.com/71786791/197360231-77f1c8d7-6a58-4ab8-b8d6-0e7064794622.mov
- 
+    )
+    ```
+    The only difference here is the **<>** and **</>** tag. This tag is known as a **fragment tag**. When rendering JSX elements, you must always include your code inside a **fragment tag** because without it, you won't be able to render more than one tag in **React**. Try to test this out by removing the fragment tag from your code. Your terminal will give you an error saying *"Adjacent elements must be wrapped...."*. 
+    
+## Functional Components
+The point of a component based system is to create reusable componenets. Let's make the following changes to our code (index.js):
 
+```JSX
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+function ClassList() {
+  return (
+    <div>
+      <h1>Welcome to the Computer Science Society Club</h1>
+      <p>List of Club Members</p>
+    </div>
+  );
+}
+
+const htmlContainer = document.getElementById("root");
+const root = ReactDOM.createRoot(htmlContainer);
+root.render(<ClassList />);
+```
+
+What did we just do?
+
+- components should begin with capital letters
+- notice the `( )` in the return
+- Try <ClassList></ClassList>, did it work?
+- is <ClassList> a standard HTML tag?
+    
+Now, let's try adding multiple **`<ClassList/>`** into our code:
+    
+```
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+function ClassList() {
+    return (
+        <div>
+          <h1>Welcome to the Computer Science Society Club</h1>
+          <p>List of Club Members</p>
+        </div>
+    );
+}
+
+const htmlContainer = document.getElementById("root");
+const root = ReactDOM.createRoot(htmlContainer);
+root.render(
+    <>
+        <ClassList />
+        <ClassList />
+        <ClassList />
+        <ClassList />
+        <ClassList />
+    </>
+);
+```
+    
+Do you see how reusable these components are and how useful creating a functional component is?
+    
+Let's do another more realistic example. Copy this code below:
+    
+```
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+function ClassList() {
+  return (
+    <div>
+      <h1>Welcome to the Computer Science Society Club</h1>
+      <p>List of Club Members</p>
+    </div>
+  );
+}
+
+function StudentInfo() {
+  return (
+    <div>
+      <div>
+        Gamarra, Leandro
+      </div>
+      <ul>
+        <li>
+          <strong>ID:</strong> 212121
+        </li>
+        <li>
+          <strong>School:</strong> John Jay College
+        </li>
+        <li>
+          <strong>Major:</strong> Computer Science / Information Security
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+const htmlContainer = document.getElementById("root");
+const root = ReactDOM.createRoot(htmlContainer);
+root.render(
+  <>
+    <ClassList />
+    <StudentInfo/>
+  </>
+);
+```
+
+Here we are creating another functional component (**StudentInfo**) to display the info of a club member. Now, how do we make this more realistic to display multiple club members?
+
+## Parameters and embedding JavaScript in JSX
+
+Here we will be learning how to pass in **parameters** to a **functional component** to be able to display different information to mutiple club members. Copy the code below:
+
+```
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+function StudentInfo(item) {
+  return (
+    <div>
+      <div>
+        {item.lastName}, {item.firstName}
+      </div>
+      <ul>
+        <li>
+          <strong>ID:</strong> {item.sId}
+        </li>
+        <li>
+          <strong>School:</strong> {item.school}
+        </li>
+        <li>
+          <strong>Major:</strong> {item.major}
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+function ClassList() {
+  return (
+    <div>
+      <h1>Welcome to the Computer Science Society Club</h1>
+      <p>List of Club Members</p>
+      <StudentInfo firstName="Leandro" lastName="Gamarra" sId="212121" school="John Jay College" major="John Jay College" />
+      <StudentInfo />
+      <StudentInfo />
+    </div>
+  );
+}
+
+const htmlContainer = document.getElementById("root");
+const root = ReactDOM.createRoot(htmlContainer);
+root.render(
+  <>
+    <ClassList />
+    <StudentInfo/>
+  </>
+);
+```
+
+**What's new here:**
+1) We passed in an **item** parameter to the **StudentInfo** component. You can name the parameter anything you'd like, but you must use the same name inside the component.
+2) After passing in a parameter, we included code like **`{item.lastName}`** where we'd like to have different data for. Opening up the **{}** let's React know that you'd like to pass in data, but you have to follow the same format of brackets ---> parameter name ---> what data you want to Pass in = `**{item.lastName}**``. We did the same thing for **firstName**, **sID**, **school**, and **major**. Make sure you keep track of the data you'd like to pass in.
+3) Inside of the **ClassList** function, where the first **StudentInfo** element is written, we now have 
 
 
 ## The End
