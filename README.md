@@ -29,6 +29,7 @@
 - JSX elements
 - Functional Components
 - Parameters and embedding JavaScript in JSX
+- Using CSS In React
 
 ---
 
@@ -126,11 +127,7 @@
 
 ## Hello World
 
-**Description**: In this part of the demo we will start off with basic **JSX** tags.
-<details>
-    <summary>Finished product for this step</summary>
-    <img src="https://i.imgur.com/6SCeUyj.png" alt="drawing" width="170" height="300"/>
-    </details>
+**Description**: In this part of the demo we will start off by learning the fundemental react code that allows us to display and render elements.
 
 0) Let's head over to our `index.js` file, located in the **`src`** folder. The **`index.js`** file is important as this is where we are redering our React code that displaye in the **root** class element in the `index.html` file in the **`public`** folder. Once in this file, delete everything on this file and copy & paste the code below.
 
@@ -187,6 +184,10 @@
         </div>
     )
     ```
+    <details>
+        <summary>Example in Browser</summary>
+        <img src="https://i.imgur.com/NEvEnhq.png" alt="drawing" width="500" height="200"/>
+    </details>
     Here we have a **div** JSX element (container),  and a pair of **h1** JSX elements. They have the same functionality as regular HTML elements but are not to be mistaken of being the same.
     
     Let's try another example of JSX code. Enter this line of code:
@@ -200,6 +201,11 @@
 
     )
     ```
+    <details>
+        <summary>Example in Browser</summary>
+        <img src="https://i.imgur.com/uFP8m0X.png" alt="drawing" width="500" height="200"/>
+    </details>
+    
     The only difference here is the **<>** and **</>** tag. This tag is known as a **fragment tag**. When rendering JSX elements, you must always include your code inside a **fragment tag** because without it, you won't be able to render more than one tag in **React**. Try to test this out by removing the fragment tag from your code. Your terminal will give you an error saying *"Adjacent elements must be wrapped...."*. 
     
 ## Functional Components
@@ -222,7 +228,11 @@ const htmlContainer = document.getElementById("root");
 const root = ReactDOM.createRoot(htmlContainer);
 root.render(<ClassList />);
 ```
-
+<details>
+    <summary>Example in Browser</summary>
+    <img src="https://i.imgur.com/ufId5LQ.png" alt="drawing" width="500" height="200"/>
+</details>
+    
 What did we just do?
 
 - components should begin with capital letters
@@ -257,6 +267,12 @@ root.render(
     </>
 );
 ```
+    
+<details>
+    <summary>Example in Browser</summary>
+    <img src="https://i.imgur.com/IQVBWxK.png" alt="drawing" width="500" height="200"/>
+</details>
+
     
 Do you see how reusable these components are and how useful creating a functional component is?
     
@@ -305,6 +321,10 @@ root.render(
   </>
 );
 ```
+<details>
+    <summary>Example in Browser</summary>
+    <img src="https://i.imgur.com/wU9h4Yg.png" alt="drawing" width="500" height="200"/>
+</details>
 
 Here we are creating another functional component (**StudentInfo**) to display the info of a club member. Now, how do we make this more realistic to display multiple club members?
 
@@ -359,11 +379,18 @@ root.render(
 );
 ```
 
+<details>
+    <summary>Example in Browser</summary>
+    <img src="https://i.imgur.com/b4rnNPr.png" alt="drawing" width="500" height="200"/>
+</details>
+
 **What's new here:**
 1) We passed in an **item** parameter to the **StudentInfo** component. You can name the parameter anything you'd like, but you must use the same name inside the component.
 2) After passing in a parameter, we included code like **`{item.lastName}`** where we'd like to have different data for. Opening up the **{}** let's React know that you'd like to pass in data, but you have to follow the same format of brackets ---> parameter name ---> what data you want to Pass in = `**{item.lastName}**``. We did the same thing for **firstName**, **sID**, **school**, and **major**. Make sure you keep track of the data you'd like to pass in.
-3) Inside of the **ClassList** function, where the first **StudentInfo** element is written, we now have 
+3) Inside of the **ClassList** function, where the first **StudentInfo** element is written, we now have, what appears to be the name of the data that we want to pass it (from our **StudentInfo** function). The format is **`lastName="Leandro"`**. Do you see how we are using the **lastName** that we defined in **StudentInfo** (they must always be the same lettering). After the equal operator we define what data we want to be displayed.
+4) Practice some more by passing in separate data. Make sure you first define what data you want to pass in **StudentInfo** first, before you pass in the data in the **StudentInfo** tag in **ClassList** function.
 
+## Using CSS In React
 
 ## The End
 **Summary**: Congratulations on building your first iOS Application on Xcode. We've included videos in almost each step if you ever get lost, and below we've included iOS Development resources if you'd like to continue learning.
