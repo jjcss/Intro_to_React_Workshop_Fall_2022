@@ -393,7 +393,7 @@ root.render(
 ## Using CSS In React
 
 ## The End
-**Summary**: Congratulations on building your first iOS Application on Xcode. We've included videos in almost each step if you ever get lost, and below we've included iOS Development resources if you'd like to continue learning.
+**Summary**: Congratulations on learning the basics of **React**. Knowing these basics you can now go on and build out a bit larger projects of your own. Below we've included React resources if you'd like to continue learning.
 
 ---
 
