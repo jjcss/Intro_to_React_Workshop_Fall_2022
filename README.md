@@ -15,8 +15,8 @@
 
 **Date:** Tuesday, November 22nd, 2022 <br>
 **Description**: In this workshop You will learn the basics of **React**. You will get an introduction into the ever evolving programming language React. This meeting will also be our **last meeting of the semester**, where we’ll recap all events and new club members. . For more information on React and other resources talked about during the meeting please continue looking below for all resources and **coding demo** steps. <br>
-**Workshop Zoom Recording**: [Click here](https://jjay-cuny.zoom.us/rec/share/w_WX2fAcJoPI4-4dhcHLG_y_hPCXmjX7NBequkk0QoH06S34hx0b5QGo7FbupUc2.wPWYQlzWqFX792Z-) <br>
-**Workshop Google Slides**: [Click here](https://docs.google.com/presentation/d/1viKLdLpINEwy6IiY2uzX_hjU2UOL8sxf_YBFfxtV2xw/edit?usp=sharing) <br>
+**Workshop Zoom Recording**: [TBD]() <br>
+**Workshop Google Slides**: [TBD]() <br>
 
 ---
 
@@ -44,64 +44,96 @@
 ---
 
 ## Pre Requisites
-- [ ] **Mac Users**: 
-    - [ ] Make sure you have [Xcode](https://developer.apple.com/xcode/) downloaded.
-        - Xcode includes everything you need to develop, test, and distribute apps across all Apple platforms. Leverage the simplicity and power of Swift with a new multiplatform app experience and code faster with enhanced editor features. Creating amazing apps has never been easier. In other words, it's an IDE (Integrated Development Environment)
-        - Xcode is a bulky application so it might take you a good amount of time to get it to fully download.
-- [ ] **Window Users**:
-    - [ ] Since Apple only allows iOS Development with Swift and Xcode on MacOS, Window users have to use a virtual machine like **Virtual Box** to be able to use these tools.
-        - VirtualBox is a cross-platform virtualization software. It allows users to extend their existing computer to run multiple operating systems including Microsoft Windows, Mac OS X, Linux, and Oracle Solaris, at the same time.
-        - [Click here](https://www.wikihow.com/Download-Xcode-on-PC-or-Mac) to learn how to download/install VirtualBox, download Xcode and begin your iOS Development learning.
+- [ ] **Download & Install React**: 
+    - [ ] Make sure you have [React](https://developer.apple.com/xcode/) downloaded and installed.
+        - Step 1:
+            - Head over to the [Node JS website](https://nodejs.org/en/) and downloaded the latest version of React. We recommend you download the `Recommended for most users` version.
+                <details>
+                    <summary>Example</summary>
+                    <img src="https://i.imgur.com/wa6kNWy.png" alt="drawing" width="400" height="200"/>
+                </details>
+        - Step 2:
+            - Located the downloaded packages and open it up. Click continue to install all necessary packeges onto your system. You might get asked to enter your username and password. That's totally fine.
+        - Step 3:
+            - Once you've downloaded Node & React, let's open up our terminal.
+                <details>
+                        <summary>Example</summary>
+                        <img src="https://i.imgur.com/MX165d1.png" alt="drawing" width="400" height="200"/>
+                </details>
+        - Step 4:
+            - Once in your terminal, let's enter in the command `node -v`. This command, if you've installed everything succesfully, will display the current version of Node that you've just downloaded.
+                <details>
+                            <summary>Example</summary>
+                            <img src="https://i.imgur.com/QH9Phfp.png" alt="drawing" width="500" height="200"/>
+                </details>
+            - Next, enter in the command `npm -v`. If you installed everything correctly, you'll get the version of npm on your terminal.
+                <details>
+                            <summary>Example</summary>
+                            <img src="https://i.imgur.com/seOiEiG.png" alt="drawing" width="500" height="200"/>
+                </details>
+        - Step 5:
+            - Once you have checked that everything was installed properly, it is now time to create our first React project. To do this, enter the command `npx create-react-app enter-any-name-here`. One you get an output saying "Happy Hacking" in your terminal, this means you've successfully installed React, and created your first project. 
+            - > Note: Every time you want to create a new React project, you would just need to enter in the command above to your terminal.
+            - > Note: Depending on your system, the installation of React may take a long time. Take this into account when installing.
+                <details>
+                            <summary>Example</summary>
+                            <img src="https://i.imgur.com/ySZcvYX.png" alt="drawing" width="500" height="200"/>
+                </details>
+        - Step 6:
+            - You've succefully installed React and created your project! Now, let's see how we can access our project. In order to begin coding, you will need to cd into the project that you just created. Since I named my project `enter-any-name-here`, I will type in the following command to cd into this project, `cd enter-any-name-here`.
+            - > Note: this step is required because in the next step we will be "turning on" our React project. 
+                <details>
+                            <summary>Example</summary>
+                            <img src="https://i.imgur.com/nZIRCPQ.png" alt="drawing" width="500" height="400"/>
+                </details>
+        - Step 7:
+            - Now, in order to get your React project up and running, you will need to type in the command `npm start` in your terminal. This will run your React project on your terminal and on a new browser. If you see the outputs like the screenshots below, then you've done all the steps correclty.
+            - > Note: On the browser that opens up when you enter in the command above, that is the inital code that all React projects start with.
+                <details>
+                            <summary>Terminal Example</summary>
+                            <img src="https://i.imgur.com/O72bfsy.png" alt="drawing" width="500" height="200"/>
+                </details>
+                <details>
+                            <summary>Browser Example</summary>
+                            <img src="https://i.imgur.com/TOMxHV5.png" alt="drawing" width="500" height="300"/>
+                </details>
+        - Step 8:
+            - Finally, in order to begin coding, you will need to open up your React project on a Coding Editor. We highly recommend you use and download [Visual Studio Code](https://code.visualstudio.com/download) as a coding editor. Once you selected a coding editor, go to where you downloaded/saved your React project and open it up on your editor. That's it. Happy coding!
 
 > Note: Please allocate some time for these steps as they take a long time to get set up/downloaded.
+> **Resources**:
+> Video on installing [React on Mac](https://www.youtube.com/watch?v=2oA9d93T9Aw)
+> Install React [Article](https://www.knowledgehut.com/blog/web-development/install-react-on-mac)
 
 ---
 
-# iOS Development Demo
+# React Demo
 
-## Step 0 - Open up Xcode & Create a New Project
+**Alternative**: For the sake of time, since downloading React is a lengthy process, an alternative for anyone who'd like to follow along, head over to this [Replit Link](https://replit.com/@replit/React-Javascript) and click on the **Use Template** button. **You will need** an account to click on the button. It shouldn't take more than 2-3 minutes to make an account. Once you made an account and you click "Use Template", you will be directed to an online Coding editor that contains all the React files that you will need to be able to follow along. 
 
-1) Open up your Xcode Application
-    <details>
-    <summary>You should see this on your screen</summary>
-    <img src="https://i.imgur.com/RCQU2Wp.png" alt="drawing" width="300" height="200"/>
-    </details>
-2) Click on `Create a New Xcode Project`
-    <details>
-    <summary>Example</summary>
-    <img src="https://i.imgur.com/cU7YmCl.png" alt="drawing" width="400" height="80"/>
-    </details>
-    
-3) You should now see a new screen asking you to choose a template for your project. We want to build and app, so let's select the `iOS Tab` and under `Application` let's select `App`
-    <details>
-    <summary>Example of configuration for our template</summary>
-    <img src="https://i.imgur.com/biYJMqy.png" alt="drawing" width="400" height="200"/>
-    </details>
-    
-4) You should now see options a few options to further configure your project. We will just be focusing on `Product Name`, `Interface` and `Language`. Name your project whatever you'd like. For `Interface` choose, `Storyboard` (we'll get more into what Storyboard is in the following steps). For language, select `Swift`. Then, click `Next`.
-    <details>
-    <summary>More configuration of project</summary>
-    <img src="https://i.imgur.com/7A48vcM.png" alt="drawing" width="400" height="200"/>
-    </details>
-    
-5) You should now see a window asking you to save your project anywhere on your system. One you choose where you want to save your project folder, click on `Create`.
+> Note: Although the above action works, and you can run React on the Online Editor, we still recommend you download React and use it in a Coding editor like Visual Studio code, as seen in the **Pre Requisites** steps.
 
-6) You have succesfully created a new Xcode Project File. We can now begin building our application 💻.
-1) Open up your Xcode Application
+## Step 0 - Look over React Files/Folders (After Installation)
+
+1) Once inside of your coding editor, after having installed React, you now see a bunch of new files/folders. You probably see the **`node_modules`** folder. This folder contains every installed dependency for your project. You don't really need to worry about this folder.
     <details>
-    <summary>Newly created project</summary>
-    <img src="https://i.imgur.com/BkZxMgU.png" alt="drawing" width="300" height="200"/>
+    <summary>node_modules folder</summary>
+    <img src="https://i.imgur.com/x4ESV5d.png" alt="drawing" width="100" height="300"/>
     </details>
 
->Take some time to look over the various files you now see and all tabs. Also check out video below to see all steps done for `Step 0`.
-    
-<!-- Step 0
-vid1 <br> -->
-https://user-images.githubusercontent.com/71786791/196853346-9268941a-7dd0-43d5-a3a5-fbcd96794afc.mov 
+2) Another folder is the **`public`** folder and this contains a bunch of images that comes with all React projects. The most important file on this folder is the **`index.html`** folder. You won't ever need to touch this file, and the only thing you should know about this is that this page allows everything to be rendered through the **`root`** class.
+    <details>
+    <summary>public folder</summary>
+    <img src="https://i.imgur.com/glZenPu.png" alt="drawing" width="80" height="250"/>
+    </details>
 
+3) Your final folder should be the **`src`** folder. This folder is where you'll be writing almost all of your code. Here is where you include all your files and components. The most important file in this folder is the **`index.js`** file. This file is what renders all your components.
+    <details>
+    <summary>src folder</summary>
+    <img src="https://i.imgur.com/5poMMSe.png" alt="drawing" width="100" height="300"/>
+    </details>
 
-<!-- vid2 <br> -->
-https://user-images.githubusercontent.com/71786791/196853551-14a9dc55-6aab-435e-9c0f-93a5d5daac18.mov
+4) Ignore the other files that you see outside of the 3 folders we mentioned as they won't be something we'll be touching over, since this is a beginner demo.
 
 ## Step 1 - Creating App Design
 
@@ -140,12 +172,10 @@ https://user-images.githubusercontent.com/71786791/197360231-77f1c8d7-6a58-4ab8-
 ---
 
 # Continue Learning About React
-- [Swift Programming Tutorial Video](https://www.youtube.com/watch?v=CwA1VWP0Ldw&ab_channel=SeanAllen)
-- [Swift Guide Documentation](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html)
-- [Apple Developer Documentation](https://developer.apple.com/swift/resources/)
-- [Build Swift Netflix Clone Programmatically Video](https://www.youtube.com/watch?v=KCgYDCKqato&t=213s&ab_channel=freeCodeCamp.org)
-- [Build Programmatic Swift Components](https://github.com/lanqy/swift-programmatically)
-- [CodePath Free iOS Development Course](https://www.codepath.org/courses)
+- [11 Hour React Free Course](https://scrimba.com/learn/learnreact)
+- [React Website: Learn more](https://reactjs.org/community/courses.html)
+- [React Youtube Course](https://www.youtube.com/watch?v=bMknfKXIFA8&t=2154s)
 
 
-> For visual learners, I'd recommend Youtube videos.
+
+> For visual learners, we'd recommend Youtube videos.
