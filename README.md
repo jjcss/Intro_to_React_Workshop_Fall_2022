@@ -14,7 +14,7 @@
 # Intro to React Workshop 
 
 **Date:** Tuesday, November 22nd, 2022 <br>
-**Description**: In this workshop You will learn the basics of **React**. You will get an introduction into the ever evolving programming language React. This meeting will also be our **last meeting of the semester**, where we’ll recap all events and new club members. . For more information on React and other resources talked about during the meeting please continue looking below for all resources and **coding demo** steps. <br>
+**Description**: In this workshop You will learn the basics of **React**. You will get an introduction into the ever evolving programming language React. This meeting will also be our **last meeting of the semester**, where we’ll recap all events and new club members. For more information on React and other resources talked about during the meeting please continue looking below for all resources and **coding demo** steps. <br>
 **Workshop Zoom Recording**: [TBD]() <br>
 **Workshop Google Slides**: [TBD]() <br>
 
@@ -391,9 +391,83 @@ root.render(
 4) Practice some more by passing in separate data. Make sure you first define what data you want to pass in **StudentInfo** first, before you pass in the data in the **StudentInfo** tag in **ClassList** function.
 
 ## Using CSS In React
+In React, you can use CSS to style your components that you've created. For those who don't know, we use CSS to give styles to JSX/HTML tags. Locate the **`index.css`** file in your **src** folder and copy and paste the code below:
+
+```
+.memberName {
+  font-size: 30px;
+}
+
+.school {
+  color: darkblue;
+}
+
+.clubName {
+  color: green;
+}
+```
+**What's did we do here**:
+We created 3 CSS Class styles, named **memberName, school, and clubName**. For the member class, we put the font-size to 30pixels, for the school we gave it a color of darkblue and for the clubName, we gave it a green color. Now, let's set these classes that we created in the **`index.css`** file into our **`index.js`** file.
+
+Let's go to our **`index.js`** file and let's copy the code below and try to notice the differencs from our previous code in this file:
+
+```
+import React from "react";
+import ReactDOM from "react-dom/client";
+import './index.css'
+
+function StudentInfo(item) {
+  return (
+    <div>
+      <div className="memberName">
+        {item.lastName}, {item.firstName}
+      </div>
+      <ul>
+        <li>
+          <strong>ID:</strong> {item.sId}
+        </li>
+        <li>
+          <strong className="school">School:</strong> {item.school}
+        </li>
+        <li>
+          <strong>Major:</strong> {item.major}
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+function ClassList() {
+  return (
+    <div>
+      <h1 className="clubName">Welcome to the Computer Science Society Club</h1>
+      <p>List of Club Members</p>
+      <StudentInfo firstName="Leandro" lastName="Gamarra" sId="212121" school="John Jay College" major="John Jay College" />
+    </div>
+  );
+}
+
+const htmlContainer = document.getElementById("root");
+const root = ReactDOM.createRoot(htmlContainer);
+root.render(
+  <>
+    <ClassList />
+    <StudentInfo/>
+  </>
+);
+```
+<details>
+    <summary>Example in Browser</summary>
+    <img src="https://i.imgur.com/fygZPWh.png" alt="drawing" width="500" height="200"/>
+</details>
+
+**What's new here**:
+1) All the way at the top of the file we inserted this line: **`import './index.css'`**. This imports and connects the classes we defined in **`index.css`**, so we now can access them in our **`index.js`** file.
+2) If you go to the **StudentInfo** component and locate where we pass in the **lastName** data, we added the **`className`** modifier to the **div** element (**className="memberName"**). This allows us to pass in our class from the **`index.css`** file and style this tag. For this example, we passed in the **"className"** class and if we go to our browser we can see that the font of where the name of the club member is is much larger, because we added CSS. 
+3) Can you identify where else we added a class from the **`index.css`** file?
 
 ## The End
-**Summary**: Congratulations on learning the basics of **React**. Knowing these basics you can now go on and build out a bit larger projects of your own. Below we've included React resources if you'd like to continue learning.
+**Summary**: Congratulations on learning the basics of **React**. Knowing these basics you can now go on and build out a bit larger project of your own. Below we've included React resources if you'd like to continue learning.
 
 ---
 
