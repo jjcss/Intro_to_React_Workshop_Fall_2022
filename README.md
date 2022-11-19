@@ -14,7 +14,7 @@
 # Intro to React Workshop 
 
 **Date:** Tuesday, November 22nd, 2022 <br>
-**Description**: In this workshop You will learn the basics of **React**. You will get an introduction to the ever-evolving programming framework, React. This meeting will also be our **last meeting of the semester**, where we’ll recap all events and new club members. For more information on React and other resources talked about during the meeting please continue looking below for all resources and **coding demo** steps. <br>
+**Description**: In this workshop we will learn the basics of **React**, the ever-evolving programming framework. This meeting will also be our **last meeting of the semester**, where we’ll recap all events and new club members. For more information on React and other resources talked about during the meeting please continue looking below for all resources and **coding demo** steps. <br>
 **Workshop Zoom Recording**: [TBD]() <br>
 **Workshop Google Slides**: [TBD]() <br>
 
