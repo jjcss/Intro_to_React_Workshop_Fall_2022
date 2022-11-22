@@ -168,7 +168,7 @@
     
     Using the **root** variable we defined earlier we are using the **render** function to render what is known as **JSX** elements, and what looks basically the same as **HTML** elements.
  
-## JSX (Not the same as HTML elements)
+## JSX (similar to HTML elements)
 
 1) JSX means **JavaScript Syntax Extension** or **JavaScript XML** as some like to put it. In other words, JSX is an HTML-like syntax that you can use in React.
 
